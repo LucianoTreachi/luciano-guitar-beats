@@ -1146,8 +1146,12 @@ RESPONSIVE
 
 @media (max-width: 1360px) {
 
+  html {
+    scroll-padding-top: 4rem;
+  }
+
   .section {
-    padding: 10rem 2rem;
+    padding: 6rem 2rem;
   }
 
   header {
@@ -1219,6 +1223,7 @@ RESPONSIVE
 
   .about .row {
     grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
   }
 
   .about-col-1 .image {
