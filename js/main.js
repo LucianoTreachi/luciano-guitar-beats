@@ -168,8 +168,6 @@ const reviews = new Swiper(".review-slider", {
 ////////// SCROLL UP ////////// 
 const scrollUp = () => {
   const scrollUp = document.getElementById('scroll-up')
-
-  // When the scroll is higher than 350 viewport height, add the active class to the a tag with the scrollup class
   this.scrollY >= 350 ? scrollUp.classList.add('active')
     : scrollUp.classList.remove('active')
 }
@@ -188,15 +186,16 @@ const alertName = document.getElementById('alert-name');
 const alertEmail = document.getElementById("alert-email");
 const alertMessage = document.getElementById("alert-message");
 
-const modalSuccess = document.getElementById("modal-success");
-const closeModalSuccess = document.getElementById("close-modal-success");
-
-const success = document.getElementById('success');
+const modalContact = document.getElementById("modal-contact");
+const modalContactLoader = document.getElementById("modal-contact-loader");
+const modalContactSuccess = document.getElementById("modal-contact-success");
+const modalContactError = document.getElementById("modal-contact-error");
+const closeModalContact = document.querySelectorAll(".close-modal-contact");
 
 /* Regular Expressions */
-const expName = /^[\S][\DÀ-ÿ\s]{1,30}$/ // minusculas (a-z), mayusculas (A-Z), acentos(À-ÿ), espacios(\s). {2 a 10 digitos}.
+const expName = /^[\S][\DÀ-ÿ\s]{1,30}$/
 const expEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{4,63}\.){1,125}[A-Z]{2,4}$/i
-const expMessage = /^[\S][0-9a-zA-ZÀ-ÿ\s\,.¡!¿?]{3,1000}$/ // minusculas (a-z), mayusculas (A-Z), acentos(À-ÿ), espacios(\s), caracteres especiales, {4 a 10 digitos}.
+const expMessage = /^[\S][0-9a-zA-ZÀ-ÿ\s\,.¡!¿?]{3,1000}$/
 
 const campos = {
   nombre: false,
@@ -283,13 +282,32 @@ form.addEventListener("submit", (e) => {
   }
 
   if (campos.nombre && campos.correo && campos.mensaje) {
-    modalSuccess.classList.add("active");
-    form.reset();
+    
+    modalContact.classList.add("active");
+
+    emailjs.sendForm('service_jr41wt8', 'template_m5qbqbi', '#form', '24LpnDak6PKXwQT2O').then(() => {
+      setTimeout(() => {
+        modalContactLoader.style.display = "none";
+        modalContactSuccess.style.display = "block";
+        form.reset();
+      }, 3000);
+    },
+
+      (error) => {
+        setTimeout(() => {
+          modalContactLoader.style.display = "none";
+          modalContactError.style.display = "block";
+          form.reset();
+        }, 3000);
+        console.log(error);
+      });
   }
 });
 
-////////// CLOSE MODAL SUCCESS //////////
-closeModalSuccess.addEventListener("click", () => {
-  modalSuccess.classList.remove("active");
-  location.href = "index.html"
+////////// CLOSE MODAL CONTACT //////////
+closeModalContact.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.classList.remove("active");
+    location.href = "index.html"
+  });
 });

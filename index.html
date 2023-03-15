@@ -535,7 +535,7 @@
                 <p class="alert" id="alert-email">Please provide a valid email</p>
               </div>
               <div class="input-container">
-                <textarea name="message" id="textarea" placeholder="Message"></textarea>
+                <textarea name="textarea" id="textarea" placeholder="Message"></textarea>
                 <p class="alert" id="alert-message">Please write a message</p>
               </div>
               <button type="submit" class="button-submit">Send</button>
@@ -545,18 +545,34 @@
       </div>
     </section>
 
-    <!--====== MODAL SUCCESS ======-->
-    <div class="modal" id="modal-success">
+    <!--====== MODAL CONTACT ======-->
+    <div class="modal" id="modal-contact">
       <div class="box">
-        <div>
-          <picture>
-            <source srcset="./assets/img/ok.webp" type="image/webp">
-            <img src="./assets/img/ok.png" alt="Ok" class="img-ok">
-          </picture>
+        <div class="loader" id="modal-contact-loader">
+          <div class="dot-spinner">
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+          </div>
+          <h2>Sending message...</h2>
         </div>
-        <h3>¡Great!</h3>
-        <p>Message sent successfully!</p>
-        <button class="close-modal-success" id="close-modal-success" translate="no">OK</button>
+        <div class="content" id="modal-contact-success">
+          <div>
+            <img src="./assets/img/ok.png" alt="Ok" class="img-ok">
+          </div>
+          <h2>¡Great!</h2>
+          <p>Message sent successfully!</p>
+          <button class="close-modal-contact">OK</button>
+        </div>
+        <div class="error" id="modal-contact-error">
+          <p>Sorry, the message could not be sent. Try again later</p>
+          <button class="close-modal-contact">Ok</button>
+        </div>
       </div>
     </div>
 
@@ -614,6 +630,8 @@
   <script src="./js/swiper-bundle.min.js"></script>
   <!-- FAQs -->
   <script src="./js/faqs.js"></script>
+   <!-- Email Js -->
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <!-- Main JS -->
   <script src="./js/main.js"></script>
 </body>
