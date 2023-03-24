@@ -822,8 +822,15 @@ CONTACT
   border-radius: 10px;
 }
 
-.input-container {
-  margin-bottom: 2.5rem;
+.container-input {
+  margin-bottom: 2rem;
+}
+
+.label-input {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: .8rem;
 }
 
 .form input {
@@ -855,7 +862,7 @@ CONTACT
 }
 
 .alert {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 500;
   text-align: left;
   color: var(--color1);

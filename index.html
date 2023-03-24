@@ -526,16 +526,19 @@
           </div>
           <div class="col-2">
             <form class="form" id="form" autocomplete="off">
-              <div class="input-container">
-                <input type="text" name="name" id="input-name" placeholder="Name">
+              <div class="container-input">
+                <label class="label-input" for="input-name">Name</label>
+                <input type="text" name="name" id="input-name">
                 <p class="alert" id="alert-name">Please provide a real name</p>
               </div>
-              <div class="input-container">
-                <input type="text" name="email" id="input-email" placeholder="Email">
+              <div class="container-input">
+                <label class="label-input" for="input-email">Email</label>
+                <input type="text" name="email" id="input-email">
                 <p class="alert" id="alert-email">Please provide a valid email</p>
               </div>
-              <div class="input-container">
-                <textarea name="textarea" id="textarea" placeholder="Message"></textarea>
+              <div class="container-input">
+                <label class="label-input" for="textarea">Message</label>
+                <textarea name="textarea" id="textarea"></textarea>
                 <p class="alert" id="alert-message">Please write a message</p>
               </div>
               <button type="submit" class="button-submit">Send</button>
