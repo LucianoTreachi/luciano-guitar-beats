@@ -4,7 +4,7 @@ GLOBAL
 
 :root {
   scroll-behavior: smooth;
-  
+
   --color1: #B38A64;
   --color2: #111f39;
   --black1: #0D0F11;
@@ -12,7 +12,7 @@ GLOBAL
   --white1: #FFFFFF;
   --white2: #F0F0F0;
   --grey: #969696;
-  --paragraph: #3a3a3a; 
+  --paragraph: #3a3a3a;
   --link: #551A8B;
 }
 
@@ -1018,11 +1018,13 @@ MODAL CONTACT
 }
 
 @keyframes pulse0112 {
+
   0%,
   100% {
     transform: scale(0);
     opacity: 0.5;
   }
+
   50% {
     transform: scale(1);
     opacity: 1;
@@ -1395,6 +1397,14 @@ RESPONSIVE
     font-size: 55%;
   }
 
+  .title {
+    text-align: initial;
+  }
+
+  .sub-title {
+    text-align: initial;
+  }
+
   .home {
     background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("../assets/img/home-phone.jpg");
   }
@@ -1411,12 +1421,9 @@ RESPONSIVE
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .freetrial .title {
-    text-align: center;
-  }
-  
-  .freetrial .sub-title {
-    text-align: center;
+  .compositions .row .box .caption {
+    text-align: initial;
+    padding: 2rem 0;
   }
 
   .freetrial .row {
@@ -1428,12 +1435,22 @@ RESPONSIVE
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .blogs .slide {
+    text-align: initial;
+    ;
+  }
+
   .faqs .row {
     width: 100%;
   }
 
+  .question-answer {
+    padding: 0 20px;
+  }
+
   .numbers .container {
     grid-template-columns: repeat(1, 1fr);
+    justify-items: initial;
   }
 
   .form {
@@ -1446,6 +1463,13 @@ RESPONSIVE
 
   footer .credit {
     text-align: left;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    width: auto;
   }
 }
 
