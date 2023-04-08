@@ -63,8 +63,10 @@ p {
 
 .sub-title {
   font-size: 2rem;
+  font-weight: 500;
   color: var(--black2);
-  opacity: .9;
+  opacity: .8;
+  line-height: 1.5;
   text-align: center;
   margin-bottom: 4rem;
 }
@@ -253,10 +255,18 @@ HOME
   line-height: 1.3;
   color: var(--white2);
   text-transform: uppercase;
+  animation: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-delay: .1s;
 }
 
 .home-paragraph {
   color: var(--white2);
+  animation: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-delay: .3s;
 }
 
 .home-btn {
@@ -270,6 +280,10 @@ HOME
   color: var(--white2);
   cursor: pointer;
   transition: .4s;
+  animation: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-delay: .6s;
 }
 
 .home-btn:hover {
@@ -315,8 +329,7 @@ ABOUT
   font-size: 2rem;
   font-weight: 500;
   color: var(--black2);
-  opacity: .9;
-  display: inline-block;
+  opacity: .8;
   margin-bottom: 4rem;
 }
 
@@ -327,6 +340,7 @@ ABOUT
 .about-col-2 p {
   line-height: 1.8;
   margin-bottom: 2.5rem;
+  color: var(--paragraph);
 }
 
 .about-col-2 a i {
@@ -375,13 +389,18 @@ COMPOSITIONS
   padding: 2rem;
 }
 
-.compositions .row .box .caption h3 {
+.compositions .row .box .caption h4 {
   font-size: 2rem;
+  font-weight: 500;
   color: var(--black2);
 }
 
-.compositions .row .box .caption p {
+.compositions .row .box .caption h5 {
   margin-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--black2);
+  opacity: .9;
 }
 
 .modal-bg {
@@ -574,7 +593,7 @@ BLOGS
 
 .blogs .sub-title {
   color: var(--white2);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .blogs .slide {
@@ -830,6 +849,8 @@ CONTACT
   display: block;
   font-size: 1.4rem;
   font-weight: 600;
+  color: var(--black2);
+  opacity: .9;
   margin-bottom: .8rem;
 }
 
@@ -841,7 +862,7 @@ CONTACT
   outline: none;
   border: 2px solid var(--grey);
   border-radius: 5px;
-  background: var(--white1);
+  background: transparent;
   padding: 1rem;
   transition: border .4s;
 }
@@ -856,12 +877,13 @@ CONTACT
   outline: none;
   border: 2px solid var(--grey);
   border-radius: 5px;
-  background: var(--white1);
+  background: transparent;
   padding: 1rem;
   transition: border .4s;
 }
 
 .alert {
+  margin-top: .3rem;
   font-size: 1.4rem;
   font-weight: 500;
   text-align: left;
@@ -871,7 +893,7 @@ CONTACT
 
 .alert.active {
   display: block;
-  animation: rotate624 1s ease-in-out both;
+  animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards; 
 }
 
 .form .button-submit {
@@ -1312,6 +1334,7 @@ RESPONSIVE
   .navbar.active {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     animation: fadeIn .1s linear;
   }
 
