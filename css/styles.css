@@ -14,6 +14,7 @@ GLOBAL
   --grey: #969696;
   --paragraph: #3a3a3a;
   --link: #551A8B;
+  --alert: #db1436;
 }
 
 * {
@@ -863,7 +864,7 @@ CONTACT
   border: 2px solid var(--grey);
   border-radius: 5px;
   background: transparent;
-  padding: 1rem;
+  padding: 1.5rem;
   transition: border .4s;
 }
 
@@ -887,7 +888,7 @@ CONTACT
   font-size: 1.4rem;
   font-weight: 500;
   text-align: left;
-  color: var(--color1);
+  color: var(--alert);
   display: none;
 }
 
@@ -900,7 +901,7 @@ CONTACT
   display: block;
   padding: 15px 35px;
   width: 100%;
-  border: none;
+  border: 2px solid var(--black2);
   border-radius: 6px;
   background-color: var(--black2);
   font-size: 1.7rem;
@@ -1342,6 +1343,8 @@ RESPONSIVE
     margin: 1.4rem 0;
     font-size: 2rem;
     color: var(--white2);
+    border-left: 3px solid var(--color1);
+    padding: 1rem;
   }
 
   .close-menu {
