@@ -206,16 +206,20 @@ nav {
 .navbar a {
   margin-left: 3rem;
   font-size: 1.7rem;
-  color: var(--white2);
+  color: #cdcdcd;
   transition: .4s;
 }
 
 .navbar a:hover {
-  color: var(--color1);
+  color: var(--white1);
 }
 
 .navbar a.active {
-  color: var(--color1);
+  color: var(--white1);
+}
+
+.social-networks-inside {
+  display: none;
 }
 
 .close-menu {
@@ -320,7 +324,7 @@ ABOUT
 }
 
 .about-col-2 h2 {
-  font-size: 3rem;
+  font-size: 2.9rem;
   font-weight: 500;
   color: var(--black2);
   margin-bottom: 1rem;
@@ -1335,16 +1339,23 @@ RESPONSIVE
   .navbar.active {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     animation: fadeIn .1s linear;
   }
 
   .navbar a {
     margin: 1.4rem 0;
-    font-size: 2rem;
-    color: var(--white2);
-    border-left: 3px solid var(--color1);
-    padding: 1rem;
+    font-size: 2.2rem;
+  }
+
+  .social-networks-inside {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .social-networks-inside i {
+    font-size: 3rem;
   }
 
   .close-menu {
@@ -1354,7 +1365,7 @@ RESPONSIVE
     right: 2rem;
     font-size: 3.5rem;
     cursor: pointer;
-    color: var(--white2);
+    color: #cdcdcd;
   }
 
   .home {
