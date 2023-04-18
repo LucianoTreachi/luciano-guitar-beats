@@ -74,10 +74,10 @@ p {
 
 .scrollup {
   position: fixed;
-  right: 0;
+  right: 2rem;
   bottom: 3rem;
-  background: var(--color1);
-  border-radius: 1rem 0 0 1rem;
+  background: var(--black2);
+  border-radius: 50%;
   width: 4.5rem;
   height: 4.5rem;
   font-size: 1.3rem;
@@ -89,6 +89,10 @@ p {
   pointer-events: none;
   opacity: 0;
   transition: all .4s;
+}
+
+.scrollup i {
+  font-size: 1.8rem;
 }
 
 .scrollup.active {
@@ -239,6 +243,7 @@ HOME
   padding: 0 9%;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: var(--black1);
   background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("../assets/img/home-1000px.jpg");
   background-size: cover;
@@ -255,11 +260,13 @@ HOME
 }
 
 .home-title {
+  margin-top: 5rem;
   font-size: 7rem;
   letter-spacing: 1px;
-  line-height: 1.3;
+  line-height: 1.2em;
   color: var(--white2);
   text-transform: uppercase;
+  width: 80%;
   animation: fadeIn;
   animation-duration: 1s;
   animation-fill-mode: backwards;
@@ -268,6 +275,7 @@ HOME
 
 .home-paragraph {
   color: var(--white2);
+  width: 50%;
   animation: fadeIn;
   animation-duration: 1s;
   animation-fill-mode: backwards;
@@ -1386,7 +1394,15 @@ RESPONSIVE
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
+
+  .home-title {
+    width: initial;
+  }
+
+  .home-paragraph {
+    width: 90%;
+  }
 
   .about .row {
     grid-template-columns: repeat(1, 1fr);
@@ -1447,7 +1463,11 @@ RESPONSIVE
   }
 
   .home-title {
-    font-size: 6rem;
+    font-size: 5rem;
+  }
+
+  .home-paragraph {
+    width: initial;
   }
 
   .about-col-1 .image {
@@ -1517,7 +1537,7 @@ RESPONSIVE
   }
 
   .home-title {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 }
 
