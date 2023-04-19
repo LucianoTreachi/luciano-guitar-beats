@@ -1354,6 +1354,7 @@ RESPONSIVE
   .navbar a {
     margin: 1.4rem 0;
     font-size: 2.2rem;
+    font-weight: 600;
   }
 
   .social-networks-inside {
