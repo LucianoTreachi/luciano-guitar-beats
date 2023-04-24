@@ -200,11 +200,6 @@ nav {
   font-size: 3rem;
   color: var(--white2);
   font-weight: bolder;
-  transition: .4s;
-}
-
-.nav-logo:hover {
-  color: var(--color1);
 }
 
 .navbar a {
@@ -265,7 +260,7 @@ HOME
   letter-spacing: 1px;
   line-height: 1.2em;
   color: var(--white2);
-  text-transform: uppercase;
+  text-transform: capitalize;
   width: 80%;
   animation: fadeIn;
   animation-duration: 1s;
@@ -275,6 +270,7 @@ HOME
 
 .home-paragraph {
   color: var(--white2);
+  opacity: .85;
   width: 50%;
   animation: fadeIn;
   animation-duration: 1s;
