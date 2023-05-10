@@ -252,15 +252,13 @@ inputEmail.addEventListener("input", () => {
 
 /* Inputs focus, keyup and blur */
 inputs.forEach((input) => {
-  input.addEventListener('focus', validateRegularExpressions);
-  input.addEventListener('keyup', validateRegularExpressions);
   input.addEventListener('blur', validateRegularExpressions);
+  input.addEventListener('input', validateRegularExpressions);
 });
 
 /* Textarea focus, keyup and blur */
-textarea.addEventListener('focus', validateRegularExpressions);
-textarea.addEventListener('keyup', validateRegularExpressions);
 textarea.addEventListener('blur', validateRegularExpressions);
+textarea.addEventListener('input', validateRegularExpressions);
 
 /* Submit */
 form.addEventListener("submit", (e) => {
