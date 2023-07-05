@@ -62,7 +62,7 @@ window.addEventListener("scroll", activeLinks);
 
 ////////// MODAL ////////// 
 const modalBg = document.querySelectorAll(".modal-bg");
-const iconModal = document.querySelectorAll(".fa-youtube");
+const iconModal = document.querySelectorAll(".icon");
 const imgModal = document.querySelectorAll(".img-video");
 const closeModal = document.querySelectorAll(".close-modal");
 const iframe = document.querySelectorAll("iframe");
@@ -71,8 +71,8 @@ let modals = function (modalClick) {
   modalBg[modalClick].classList.add("active");
 };
 
-iconModal.forEach((play, e) => {
-  play.addEventListener("click", () => {
+iconModal.forEach((iconPlay, e) => {
+  iconPlay.addEventListener("click", () => {
     modals(e);
   });
 });
@@ -250,13 +250,13 @@ inputEmail.addEventListener("input", () => {
   inputEmail.value = inputEmail.value.replace(/ /g, "");
 })
 
-/* Inputs focus, keyup and blur */
+/* Inputs events */
 inputs.forEach((input) => {
   input.addEventListener('blur', validateRegularExpressions);
   input.addEventListener('input', validateRegularExpressions);
 });
 
-/* Textarea focus, keyup and blur */
+/* Textarea events */
 textarea.addEventListener('blur', validateRegularExpressions);
 textarea.addEventListener('input', validateRegularExpressions);
 
@@ -280,7 +280,7 @@ form.addEventListener("submit", (e) => {
   }
 
   if (campos.nombre && campos.correo && campos.mensaje) {
-    
+
     modalContact.classList.add("active");
 
     emailjs.sendForm('service_jr41wt8', 'template_m5qbqbi', '#form', '24LpnDak6PKXwQT2O').then(() => {
