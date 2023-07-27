@@ -4,15 +4,17 @@
 
 ## Descripción
 
-<p>Toco la guitarra hace muchos años y he vendido composiciones propias al exterior. A raíz de esto diseñé y desarrollé mi propio sitio web.</p> 
-<p>Se adapta perfectamente a cualquier dispositivo: escritorio, tablet y móvil, lo que permite disfrutar de una experiencia de usuario fluida y cómoda en cualquier momento y en cualquier lugar.</p> 
+<p>Diseñé y Desarrollé un sitio web personal destinado a la venta de composiciones musicales.</p> 
+<p>Es 100% responsive, se adapta perfectamente a cualquier dispositivo: escritorio, tablet y móvil.</p>
 
-## Desarrollado con
+## Tecnologías utilizadas
 
-- HTML5
-- CSS3
-- Javascript
-- Swiper js
+<p>• HTML5</p>
+<p>• CSS3</p>
+<p>• JavaScript</p>
+<p>• Email js</p>
+<p>• Swiper js</p>
 
 ## Autor
+
 **Luciano Treachi**
