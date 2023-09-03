@@ -111,11 +111,6 @@ const blogs = new Swiper(".blogs-slider", {
   grabCursor: true,
   spaceBetween: 30,
 
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -140,11 +135,6 @@ const reviews = new Swiper(".review-slider", {
   loop: true,
   grabCursor: true,
   spaceBetween: 30,
-
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
 
   pagination: {
     el: ".swiper-pagination",
