@@ -246,27 +246,6 @@ HOME
   animation-delay: .3s;
 }
 
-.home-btn {
-  margin-top: 2rem;
-  padding: 2rem 4rem;
-  background-color: var(--black2);
-  box-shadow: 1px 1px 20px 1px hsl(0deg 0% 100% / 37%);
-  border: none;
-  border-radius: 6px;
-  font-size: 1.7rem;
-  color: var(--white2);
-  cursor: pointer;
-  transition: .4s;
-  animation: fadeIn;
-  animation-duration: 1s;
-  animation-fill-mode: backwards;
-  animation-delay: .6s;
-}
-
-.home-btn:hover {
-  background-color: var(--black1);
-}
-
 /*=============================== 
 ABOUT
 ================================*/
@@ -320,7 +299,7 @@ ABOUT
   color: var(--paragraph);
 }
 
-.about-col-2 a i {
+.about-col-2 i {
   color: var(--black2);
   font-size: 3rem;
 }

@@ -1,7 +1,4 @@
 ////////// DOM ELEMENTS ////////// 
-const homeBtn = document.getElementById("home-btn");
-const sectionAbout = document.getElementById("about");
-
 const openMenu = document.querySelector(".fa-bars");
 const closeMenu = document.querySelector(".fa-times");
 const navbar = document.querySelector(".navbar");
@@ -16,11 +13,6 @@ const closeModal = document.querySelectorAll(".close-modal");
 const iframe = document.querySelectorAll("iframe");
 
 const scrollUp = document.getElementById('scroll-up')
-
-////////// HOME BTN ////////// 
-homeBtn.addEventListener("click", () => {
-  location.href = "#about"
-})
 
 ////////// RESPONSIVE MENU ////////// 
 openMenu.addEventListener('click', () => {
