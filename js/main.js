@@ -1,27 +1,37 @@
-////////// HOME BTN ////////// 
+////////// DOM ELEMENTS ////////// 
 const homeBtn = document.getElementById("home-btn");
-const secctionAbout = document.getElementById("about");
+const sectionAbout = document.getElementById("about");
 
+const openMenu = document.querySelector(".fa-bars");
+const closeMenu = document.querySelector(".fa-times");
+const navbar = document.querySelector(".navbar");
+const links = document.querySelectorAll('.navbar a')
+
+const sections = document.querySelectorAll('section')
+
+const modalBg = document.querySelectorAll(".modal-bg");
+const iconModal = document.querySelectorAll(".icon");
+const imgModal = document.querySelectorAll(".img-video");
+const closeModal = document.querySelectorAll(".close-modal");
+const iframe = document.querySelectorAll("iframe");
+
+const scrollUp = document.getElementById('scroll-up')
+
+////////// HOME BTN ////////// 
 homeBtn.addEventListener("click", () => {
   location.href = "#about"
 })
 
 ////////// RESPONSIVE MENU ////////// 
-const openMenu = document.querySelector(".fa-bars");
-const closeMenu = document.querySelector(".fa-times");
-const navbar = document.querySelector(".navbar");
-const navLinks = document.querySelectorAll(".navbar a");
-
 openMenu.addEventListener('click', () => {
   navbar.classList.add("active");
 });
 
 closeMenu.addEventListener('click', () => {
   navbar.classList.remove("active");
-
 });
 
-navLinks.forEach((e) => {
+links.forEach((e) => {
   e.addEventListener('click', () => {
     navbar.classList.remove("active");
   })
@@ -47,9 +57,6 @@ window.onload = () => {
 };
 
 ////////// ACTIVE LINK WITH SCROLL //////////
-const links = document.querySelectorAll('.navbar a')
-const sections = document.querySelectorAll('section')
-
 function activeLinks() {
   let len = sections.length;
   while (--len && window.scrollY + 97 < sections[len].offsetTop) { }
@@ -60,13 +67,24 @@ function activeLinks() {
 activeLinks();
 window.addEventListener("scroll", activeLinks);
 
-////////// MODAL ////////// 
-const modalBg = document.querySelectorAll(".modal-bg");
-const iconModal = document.querySelectorAll(".icon");
-const imgModal = document.querySelectorAll(".img-video");
-const closeModal = document.querySelectorAll(".close-modal");
-const iframe = document.querySelectorAll("iframe");
+////////// SCROLL TO SECTION //////////
+links.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
 
+    const sectionId = link.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(sectionId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+////////// MODAL ////////// 
 let modals = function (modalClick) {
   modalBg[modalClick].classList.add("active");
 };
@@ -155,13 +173,19 @@ const reviews = new Swiper(".review-slider", {
   },
 });
 
-////////// SCROLL UP ////////// 
-const scrollUp = () => {
-  const scrollUp = document.getElementById('scroll-up')
-  this.scrollY >= 350 ? scrollUp.classList.add('active')
-    : scrollUp.classList.remove('active')
-}
-window.addEventListener('scroll', scrollUp)
+window.addEventListener("scroll", function () {
+  scrollUp.classList.toggle("active", window.scrollY > 500);
+});
+
+scrollUp.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+})
 
 ////////// CONTACT //////////
 const contactSection = document.getElementById('contact')
