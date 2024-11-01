@@ -2,7 +2,7 @@
 const openMenu = document.querySelector(".fa-bars");
 const closeMenu = document.querySelector(".fa-times");
 const navbar = document.querySelector(".navbar");
-const links = document.querySelectorAll('.navbar a')
+const navLinks = document.querySelectorAll('.nav-link')
 
 const sections = document.querySelectorAll('section')
 
@@ -23,7 +23,7 @@ closeMenu.addEventListener('click', () => {
   navbar.classList.remove("active");
 });
 
-links.forEach((e) => {
+navLinks.forEach((e) => {
   e.addEventListener('click', () => {
     navbar.classList.remove("active");
   })
@@ -52,15 +52,15 @@ window.onload = () => {
 function activeLinks() {
   let len = sections.length;
   while (--len && window.scrollY + 97 < sections[len].offsetTop) { }
-  links.forEach(link => link.classList.remove("active"));
-  links[len].classList.add("active");
+  navLinks.forEach(link => link.classList.remove("active"));
+  navLinks[len].classList.add("active");
 }
 
 activeLinks();
 window.addEventListener("scroll", activeLinks);
 
 ////////// SCROLL TO SECTION //////////
-links.forEach(link => {
+navLinks.forEach(link => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
 
