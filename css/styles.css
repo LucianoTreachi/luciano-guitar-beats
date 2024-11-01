@@ -248,7 +248,7 @@ HOME
 
 .home-btn {
   margin-top: 2rem;
-  padding: 1.5rem 3rem;
+  padding: 2rem 4rem;
   background-color: var(--black2);
   box-shadow: 1px 1px 20px 1px hsl(0deg 0% 100% / 37%);
   border: none;
@@ -1153,8 +1153,8 @@ SCROLL UP
   bottom: 3rem;
   background: var(--black2);
   border-radius: 50%;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 6rem;
+  height: 6rem;
   font-size: 1.3rem;
   color: var(--white2);
   z-index: 2;
