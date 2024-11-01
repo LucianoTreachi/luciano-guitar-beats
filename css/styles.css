@@ -1424,10 +1424,10 @@ RESPONSIVE
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 574px) {
 
   html {
-    font-size: 55%;
+    font-size: 58%;
   }
 
   .title {
@@ -1439,10 +1439,11 @@ RESPONSIVE
   }
 
   .home {
-    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("../assets/img/home-phone.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("../assets/img/home-phone-2.jpg");
   }
 
   .home-title {
+    margin-top: 20rem;
     font-size: 5rem;
   }
 
