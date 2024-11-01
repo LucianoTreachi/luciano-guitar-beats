@@ -43,67 +43,6 @@ p {
   color: var(--paragraph);
 }
 
-.section {
-  padding: 14rem 9%;
-}
-
-.container {
-  width: 100%;
-  max-width: 1320px;
-  margin: auto;
-}
-
-.title {
-  font-size: 4rem;
-  color: var(--black2);
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: .5rem;
-}
-
-.sub-title {
-  font-size: 2rem;
-  font-weight: 500;
-  color: var(--black2);
-  opacity: .8;
-  line-height: 1.5;
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.scrollup {
-  position: fixed;
-  right: 2rem;
-  bottom: 3rem;
-  background: var(--black2);
-  border-radius: 50%;
-  width: 4.5rem;
-  height: 4.5rem;
-  font-size: 1.3rem;
-  color: var(--white2);
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-  opacity: 0;
-  transition: all .4s;
-}
-
-.scrollup i {
-  font-size: 1.8rem;
-}
-
-.scrollup.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.scrollup:hover {
-  transform: translateY(-.25rem);
-}
-
 ::-webkit-scrollbar {
   height: .5rem;
   width: 1rem;
@@ -169,6 +108,35 @@ p {
   100% {
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
+}
+
+.section {
+  padding: 14rem 9%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: auto;
+}
+
+.title {
+  font-size: 4rem;
+  color: var(--black2);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: .5rem;
+}
+
+.sub-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--black2);
+  opacity: .8;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 /*=============================== 
@@ -902,7 +870,7 @@ CONTACT
 
 .alert.active {
   display: block;
-  animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards; 
+  animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 }
 
 .form .button-submit {
@@ -1173,6 +1141,42 @@ footer .credit {
   letter-spacing: .5px;
   color: var(--white2);
   opacity: .8;
+}
+
+/*=============================== 
+SCROLL UP
+================================*/
+
+.scrollup {
+  position: fixed;
+  right: 2rem;
+  bottom: 3rem;
+  background: var(--black2);
+  border-radius: 50%;
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 1.3rem;
+  color: var(--white2);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all .4s;
+}
+
+.scrollup i {
+  font-size: 1.8rem;
+}
+
+.scrollup.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scrollup:hover {
+  transform: translateY(-.25rem);
 }
 
 /*=============================== 
