@@ -126,7 +126,7 @@ p {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
 .sub-title {
@@ -137,6 +137,11 @@ p {
   line-height: 1.5;
   text-align: center;
   margin-bottom: 4rem;
+}
+
+.swiper-pagination-bullet {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 /*=============================== 
@@ -218,17 +223,19 @@ HOME
   padding: 10rem 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 
 .home-title {
   margin-top: 5rem;
-  font-size: 7rem;
+  font-size: 8rem;
   letter-spacing: 1px;
-  line-height: 1.2em;
+  line-height: 1;
   color: var(--white2);
   text-transform: capitalize;
+  text-align: center;
   width: 80%;
   animation: fadeIn;
   animation-duration: 1s;
@@ -237,6 +244,7 @@ HOME
 }
 
 .home-paragraph {
+  text-align: center;
   color: var(--white2);
   opacity: .85;
   width: 50%;
@@ -254,34 +262,33 @@ ABOUT
   background: var(--white1);
 }
 
-.about .row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6rem;
+.about .container {
+  max-width: 800px;
 }
 
-.about-col-1 .image {
+.about .image {
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, .6);
   border-radius: 10px;
+  margin-bottom: 4rem;
 }
 
-.about-col-1 .image img {
+.about .image img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
 
-.about-col-2 h2 {
-  font-size: 2.8rem;
+.about h2 {
+  font-size: 4rem;
   font-weight: 500;
   color: var(--black2);
   margin-bottom: 1rem;
 }
 
-.about-col-2 h3 {
+.about h3 {
   font-size: 2rem;
   font-weight: 500;
   color: var(--black2);
@@ -289,17 +296,17 @@ ABOUT
   margin-bottom: 4rem;
 }
 
-.about-col-2 span {
+.about span {
   font-size: 2.5rem;
 }
 
-.about-col-2 p {
+.about p {
   line-height: 1.8;
   margin-bottom: 2.5rem;
   color: var(--paragraph);
 }
 
-.about-col-2 i {
+.about i {
   color: var(--black2);
   font-size: 3rem;
 }
@@ -412,35 +419,30 @@ FREE TRIAL
   padding: 14rem 9% 16rem;
 }
 
-.freetrial .title {
-  text-align: left;
+.freetrial .container {
+  max-width: 800px;
 }
 
-.freetrial .sub-title {
-  text-align: left;
-}
-
-.freetrial .row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6rem;
-}
-
-.freetrial-col-1 .image {
+.freetrial .image {
   width: 100%;
   height: 100%;
   border-radius: 10px;
   box-shadow: 1px 1px 20px 1px hsl(0deg 0% 100% / 37%);
+  margin-bottom: 4rem;
 }
 
-.freetrial-col-1 .image img {
+.freetrial .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.freetrial-col-2 h3 {
+.freetrial p {
+  padding: 1rem 0;
+}
+
+.freetrial h4 {
   font-size: 3rem;
   font-weight: 500;
   color: var(--black2);
@@ -448,22 +450,18 @@ FREE TRIAL
   margin-bottom: 3rem;
 }
 
-.freetrial-col-2 p {
-  padding: 1rem 0;
-}
-
-.freetrial-col-2 h4 {
+.freetrial h5 {
   font-size: 1.7rem;
   font-weight: 500;
   color: var(--black2);
   margin: 4rem 0 3rem;
 }
 
-.freetrial-col-2 .icons a {
+.freetrial .icons a {
   margin-right: 1.5rem;
 }
 
-.freetrial-col-2 img {
+.freetrial img {
   width: 4rem;
 }
 
@@ -683,10 +681,6 @@ REVIEWS
 .reviews .slide .user h3 {
   font-size: 2rem;
   color: var(--black2);
-}
-
-.reviews .swiper-pagination-bullet {
-  background-color: var(--grey);
 }
 
 .reviews .swiper-pagination-bullet-active {
@@ -1295,7 +1289,7 @@ RESPONSIVE
   }
 
   .section {
-    padding: 6rem 2rem;
+    padding: 10rem 4%;
   }
 
   header {
@@ -1360,10 +1354,6 @@ RESPONSIVE
     padding: 2rem;
   }
 
-  .compositions .row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .numbers .container {
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
@@ -1385,12 +1375,15 @@ RESPONSIVE
   }
 
   .about .row {
-    grid-template-columns: repeat(1, 1fr);
     gap: 4rem;
   }
 
-  .about-col-1 .image {
-    width: 50%;
+  .about .image {
+    width: 100%;
+  }
+
+  .compositions .row {
+    grid-template-columns: 1fr;
   }
 
   .modal-body video {
@@ -1430,8 +1423,13 @@ RESPONSIVE
     font-size: 58%;
   }
 
+  .section {
+    padding: 6rem 2rem;
+  }
+
   .title {
     text-align: initial;
+    font-size: 3rem;
   }
 
   .sub-title {
@@ -1445,28 +1443,29 @@ RESPONSIVE
   .home-title {
     margin-top: 20rem;
     font-size: 5rem;
+    text-align: initial;
   }
 
   .home-paragraph {
     width: initial;
+    text-align: initial;
   }
 
-  .about-col-1 .image {
+  .about h2 {
+    font-size: 2.6rem;
+  }
+
+  .about h3 {
+    font-size: 1.8rem;
+  }
+
+  .about .image {
     width: 100%;
-  }
-
-  .compositions .row {
-    grid-template-columns: repeat(1, 1fr);
   }
 
   .compositions .row .box .caption {
     text-align: initial;
     padding: 2rem 0;
-  }
-
-  .freetrial .row {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 4rem;
   }
 
   .step-by-step .row {
