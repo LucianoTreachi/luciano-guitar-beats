@@ -1,4 +1,6 @@
 ////////// DOM ELEMENTS ////////// 
+const header = document.querySelector("header");
+
 const openMenuButton = document.querySelector(".open-menu-button");
 const closeMenuButton = document.querySelector(".close-menu-button");
 const navbar = document.querySelector(".navbar");
@@ -14,50 +16,59 @@ const iframe = document.querySelectorAll("iframe");
 
 const scrollUp = document.getElementById('scroll-up')
 
-////////// RESPONSIVE MENU ////////// 
-openMenuButton.addEventListener('click', () => {
+////////// RESPONSIVE MENU //////////
+function openMenu() {
   navbar.classList.add("active");
-});
-
-closeMenuButton.addEventListener('click', () => {
-  navbar.classList.remove("active");
-});
-
-navLinks.forEach((e) => {
-  e.addEventListener('click', () => {
-    navbar.classList.remove("active");
-  })
-});
-
-////////// SCROLL HEADER ////////// 
-window.onscroll = () => {
-  navbar.classList.remove('active');
-
-  if (window.scrollY > 0) {
-    document.querySelector('header').classList.add('active');
-  } else {
-    document.querySelector('header').classList.remove('active');
-  }
-};
-
-window.onload = () => {
-  if (window.scrollY > 0) {
-    document.querySelector('header').classList.add('active');
-  } else {
-    document.querySelector('header').classList.remove('active');
-  }
-};
-
-////////// ACTIVE LINK WITH SCROLL //////////
-function activeLinks() {
-  let len = sections.length;
-  while (--len && window.scrollY + 97 < sections[len].offsetTop) { }
-  navLinks.forEach(link => link.classList.remove("active"));
-  navLinks[len].classList.add("active");
 }
 
-activeLinks();
-window.addEventListener("scroll", activeLinks);
+function closeMenu() {
+  navbar.classList.remove("active");
+}
+
+openMenuButton.addEventListener('click', openMenu);
+closeMenuButton.addEventListener('click', closeMenu);
+
+navLinks.forEach((e) => {
+  e.addEventListener('click', closeMenu);
+});
+
+////////// HEADER ////////// 
+function toggleHeaderClass() {
+  if (window.scrollY > 0) {
+    header.classList.add('active');
+  } else {
+    header.classList.remove('active');
+  }
+}
+
+window.onscroll = () => {
+  closeMenu();
+  toggleHeaderClass();
+};
+
+window.onload = toggleHeaderClass;
+
+////////// ACTIVE LINK //////////
+function activeLinks() {
+  const scrollPosition = window.scrollY + 97;
+  let activeIndex = -1;
+
+  for (let i = 0; i < sections.length; i++) {
+    if (scrollPosition >= sections[i].offsetTop) {
+      activeIndex = i;
+    } else {
+      break;
+    }
+  }
+
+  navLinks.forEach(link => link.classList.remove("active"));
+  if (activeIndex >= 0) {
+    navLinks[activeIndex].classList.add("active");
+  }
+}
+
+window.addEventListener('load', activeLinks);
+window.addEventListener('scroll', activeLinks);
 
 ////////// SCROLL TO SECTION //////////
 navLinks.forEach(link => {
@@ -75,6 +86,21 @@ navLinks.forEach(link => {
     }
   });
 });
+
+////////// SCROLL UP //////////
+window.addEventListener("scroll", function () {
+  scrollUp.classList.toggle("active", window.scrollY > 500);
+});
+
+scrollUp.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+})
 
 ////////// MODAL ////////// 
 let modals = function (modalClick) {
@@ -115,7 +141,7 @@ modalBg.forEach((modal) => {
   });
 });
 
-////////// BLOGS SWIPER ////////// 
+////////// SWIPER BLOGS ////////// 
 const blogs = new Swiper(".blogs-slider", {
   loop: true,
   grabCursor: true,
@@ -140,7 +166,7 @@ const blogs = new Swiper(".blogs-slider", {
   },
 });
 
-////////// REVIEWS SWIPER ////////// 
+////////// SWIPER REVIEWS ////////// 
 const reviews = new Swiper(".review-slider", {
   loop: true,
   grabCursor: true,
@@ -164,20 +190,6 @@ const reviews = new Swiper(".review-slider", {
     },
   },
 });
-
-window.addEventListener("scroll", function () {
-  scrollUp.classList.toggle("active", window.scrollY > 500);
-});
-
-scrollUp.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: 'smooth'
-  });
-})
 
 ////////// CONTACT //////////
 const contactSection = document.getElementById('contact')
