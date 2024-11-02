@@ -201,9 +201,10 @@ nav {
   display: none;
 }
 
-.close-menu-button i {
-  font-size: 3.5rem;
-  color: #cdcdcd;
+.close-menu-button svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: var(--white2);
 }
 
 .open-menu-button {
@@ -216,6 +217,12 @@ nav {
 .open-menu-button i {
   font-size: 3rem;
   color: var(--white2);
+}
+
+.open-menu-button svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  stroke: var(--white2);
 }
 
 /*=============================== 
