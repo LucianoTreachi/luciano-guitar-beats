@@ -194,12 +194,28 @@ nav {
   display: none;
 }
 
-.close-menu {
+.close-menu-button {
+  border: none;
+  background: none;
+  cursor: pointer;
   display: none;
 }
 
-.open-menu {
+.close-menu-button i {
+  font-size: 3.5rem;
+  color: #cdcdcd;
+}
+
+.open-menu-button {
+  border: none;
+  background: none;
+  cursor: pointer;
   display: none;
+}
+
+.open-menu-button i {
+  font-size: 3rem;
+  color: var(--white2);
 }
 
 /*=============================== 
@@ -1296,11 +1312,10 @@ RESPONSIVE
     padding: 2rem;
   }
 
-  .open-menu {
-    display: inline-block;
-    color: var(--white2);
-    font-size: 3rem;
-    cursor: pointer;
+  .open-menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .navbar {
@@ -1340,14 +1355,13 @@ RESPONSIVE
     font-size: 3rem;
   }
 
-  .close-menu {
-    display: block;
+  .close-menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 2rem;
     right: 2rem;
-    font-size: 3.5rem;
-    cursor: pointer;
-    color: #cdcdcd;
   }
 
   .home {

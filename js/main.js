@@ -1,6 +1,6 @@
 ////////// DOM ELEMENTS ////////// 
-const openMenu = document.querySelector(".fa-bars");
-const closeMenu = document.querySelector(".fa-times");
+const openMenuButton = document.querySelector(".open-menu-button");
+const closeMenuButton = document.querySelector(".close-menu-button");
 const navbar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll('.nav-link')
 
@@ -15,11 +15,11 @@ const iframe = document.querySelectorAll("iframe");
 const scrollUp = document.getElementById('scroll-up')
 
 ////////// RESPONSIVE MENU ////////// 
-openMenu.addEventListener('click', () => {
+openMenuButton.addEventListener('click', () => {
   navbar.classList.add("active");
 });
 
-closeMenu.addEventListener('click', () => {
+closeMenuButton.addEventListener('click', () => {
   navbar.classList.remove("active");
 });
 
