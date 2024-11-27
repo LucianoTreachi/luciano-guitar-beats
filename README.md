@@ -1,19 +1,27 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/LucianoTreachi/Luciano-Guitar-Beats/main/assets/readme/banner.jpg" width="100%" alt="Banner"/>
-</div>
+# Luciano Guitar Beats: ¡Descubre mis ideas musicales!
 
-### ✅ Proyecto
+**Luciano Guitar Beats** es un sitio web dedicado a la promoción y venta de composiciones musicales propias.
 
-- Diseñé y Desarrollé un sitio web personal destinado a la venta de composiciones musicales. Es 100% responsivo, se adapta perfectamente a cualquier dispositivo: escritorio, tablet y móvil. ¡Descubrí mi música en cualquier lugar!
+## Vista previa
 
-### ⚡ Tecnologías Utilizadas
+[![Captura de pantalla del proyecto](https://i.postimg.cc/QCSLDF36/website.jpg)](https://postimg.cc/ctKkM46Y)
 
-- HTML5
-- CSS3
-- JavaScript
-- Email JS
-- Swiper JS
+## Explora el sitio web
 
-### 👽 Autor
+Accede aquí → [Luciano Guitar Beats](https://lucianoguitarbeats.netlify.app/)
 
-- Luciano Treachi
+## Tecnologías utilizadas
+
+- **HTML:** Estructura y contenido.
+- **CSS:** Estilización y diseño responsivo.
+- **JavaScript:** Funcionalidad interactiva.
+- **Swiper JS:** Biblioteca para crear carruseles interactivos.
+
+## Desarrollado por
+
+**Luciano Treachi**
+
+Soy un Desarrollador Frontend dedicado a crear soluciones web eficientes, accesibles, intuitivas y fáciles de usar que potencian la experiencia del usuario.
+
+[![Sitio Web](https://img.shields.io/badge/Sitio_Web-black?style=for-the-badge&logoColor=white)](https://lucianotreachi.vercel.app/)
+[![linkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logoColor=white)](https://www.linkedin.com/in/luciano-treachi/)
