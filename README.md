@@ -6,16 +6,19 @@
 
 [![Captura de pantalla del proyecto](https://i.postimg.cc/QCSLDF36/website.jpg)](https://postimg.cc/ctKkM46Y)
 
-## Explora el sitio web
-
-Accede aquí → [Luciano Guitar Beats](https://lucianoguitarbeats.netlify.app/)
-
 ## Tecnologías utilizadas
 
 - **HTML:** Estructura y contenido.
+
 - **CSS:** Estilización y diseño responsivo.
+
 - **JavaScript:** Funcionalidad interactiva.
+
 - **Swiper JS:** Biblioteca para crear carruseles interactivos.
+
+## Explora el sitio web
+
+Accede aquí → [Luciano Guitar Beats](https://lucianoguitarbeats.netlify.app/)
 
 ## Desarrollado por
 
