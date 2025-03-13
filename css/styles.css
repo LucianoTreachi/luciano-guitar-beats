@@ -410,7 +410,9 @@ COMPOSITIONS
 .modal-body {
   position: relative;
   display: flex;
-  max-width: 100%;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
   padding: 6rem 2%;
 }
 
