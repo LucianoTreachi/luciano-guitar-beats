@@ -8,13 +8,10 @@
 
 ## Tecnologías utilizadas
 
-- **HTML:** Estructura y contenido.
-
-- **CSS:** Estilización y diseño responsivo.
-
-- **JavaScript:** Funcionalidad interactiva.
-
-- **Swiper JS:** Biblioteca para crear carruseles interactivos.
+- HTML
+- CSS
+- JavaScript
+- Swiper JS
 
 ## Explora el sitio web
 
